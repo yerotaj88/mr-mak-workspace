@@ -28,6 +28,8 @@ export interface WorkspaceEntity {
   pinned?: boolean
   /** Starter examples remain visible until explicitly archived. */
   sample?: boolean
+  /** 'sidebar': the project's pages carry their own navigation, so the topbar is hidden. */
+  navigation?: 'sidebar'
 }
 
 export interface WorkspaceState {

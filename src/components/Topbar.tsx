@@ -12,6 +12,9 @@ interface TopbarProps {
 }
 
 export default function Topbar({ entity, stepIndex, onStep, onHome, reportUrl }: TopbarProps) {
+  // HOTD pages now share their own persistent sidebar navigation; other projects opt in from the registry.
+  if (entity?.id === 'dungeon-crawler' || entity?.navigation === 'sidebar') return null
+
   return (
     <div className="topbar">
       <nav className="breadcrumb" aria-label="Breadcrumb">
