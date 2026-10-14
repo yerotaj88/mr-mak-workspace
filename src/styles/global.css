@@ -384,6 +384,11 @@ button:focus-visible {
   backdrop-filter: blur(14px);
 }
 
+/* HOTD is navigated inside its page-level World Tower sidebar. */
+.app-layout[data-entity="dungeon-crawler"] > .main > .topbar {
+  display: none;
+}
+
 .breadcrumb {
   display: flex;
   align-items: center;
